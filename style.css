@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: blueviolet;
+    background-color: purple;
 }
 
 .container{
@@ -15,7 +15,12 @@ body{
     display: grid;
     /* grid-template-rows: 200px 200px;
     grid-template-columns: 200px 200px 200px; */
-    grid-template: 200px 200px / 100px 100px 100px;
+    /* grid-template: 200px 200px / 100px 100px 100px; */
+    /* grid-template: 200px 200px / 1fr 1fr 1fr; */
+    grid-template: repeat(2,200px) / 1fr 1fr 1fr;
+    /* row-gap: 10px;
+    column-gap: 10px; */
+    gap: 20px;
 }
 
 .kutu1{
