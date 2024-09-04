@@ -18,10 +18,16 @@ body{
     /* grid-template: 200px 200px / 100px 100px 100px; */
     /* grid-template: 200px 200px / 1fr 1fr 1fr; */
     grid-template: repeat(4,200px) / 1fr 1fr 1fr;
+    grid-template-areas: 
+    "header header header"
+    "menu aside main"
+    "item footer main";
     /* grid-auto-rows: 300px; */
     /* row-gap: 10px;
     column-gap: 10px; */
     gap: 20px;
+    /* align-content: center; */
+    /* justify-items: center; */
 }
 
 .kutu1{
@@ -29,27 +35,49 @@ body{
     /* grid-column-start: 1;
     grid-column-end: 3; */
     /* grid-column: 1/4; */
-    grid-column: 1/-1;
+    /* grid-column: 1/-1; */
+    grid-area: header;
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
 
 .kutu2{
     background-color: blue;
+    grid-area: menu;
+    display: grid;
+    justify-content: right;
+    align-items: right;
 }
 
 .kutu3{
     background-color: yellow;
-    grid-column: 1/-1;
+    /* grid-column: 1/-1; */
     grid-row: 2/3;
+    grid-area: aside;
+    /* grid-column: span 2; */
+    display: grid;
+    justify-content: end;
+    align-items: end;
 }
 
 .kutu4{
     background-color: pink;
+    grid-area: main;
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
 
 .kutu5{
     background-color: green;
+    grid-area: item;
+    display: grid;
+    justify-content: flex-start;
+    align-items: flex-end;
 }
 
 .kutu6{
     background-color: crimson;
+    grid-area: footer;
 }
